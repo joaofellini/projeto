@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Lei de Ohm</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1> Lei de Ohm </h1>
+    <script>
+        function pergunta(valor){
+      return(Number(prompt(valor)));
+      }
+
+        function mostrar(texto) {
+        document.write(texto);
+      }
+
+let continuar = true;
+      //U=r*i
+while (continuar){
+let variavel = prompt("O que você deseja encontrar? Selecione a letra de acordo com sua necessidade: U - Tensão ; R - Resistencia ou I - Corrente Eletrica.")
+
+      if (variavel == "U" || "u" ){
+        let resistencia = pergunta("Qual a resistencia aplicada?");
+
+        let corrente = pergunta("Qual a corrente aplicada?");
+
+        let resultado = resistencia * corrente;
+        
+        mostrar(`A tensão é ${resultado} voltz.`);
+        break
+      }
+      if (variavel == "R" || "r") {
+        let tensao = pergunta("Qual a tensão aplicada?");
+
+        let corrente = pergunta("Qual a corrente aplicada?");
+
+        let resultado = tensao/corrente;
+        
+        mostrar(`A resistência é ${resultado} Ω.`);
+        break
+      }
+      if (variavel == "I" || "i") {
+        let tensao = pergunta("Qual a tensão aplicada?");
+
+        let resistencia = pergunta("Qual a resistencia aplicada?");
+
+        let resultado = tensao/resistencia;
+        
+        mostrar(`A corrente é ${resultado} ampère .`);
+        break
+      }else{
+        mostrar("Digite uma opção valida.")
+      }
+    }
+    </script>
+  </body>
+</html>
